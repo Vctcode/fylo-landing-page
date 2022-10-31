@@ -18,14 +18,10 @@
   box-sizing: border-box;
 }
 
-/* body {
-  /* background-color: var(--lightGrayishBlue); 
-} */
-
 header {
   width: 100%;
   font-family: var(--headingsFamily);
-  margin-bottom: 40px;
+  background: #fff;
 }
 
 nav {
@@ -35,7 +31,7 @@ nav {
 }
 nav > img {
   width: 5rem;
-  margin: 30px;
+  margin: 30px 20px;
 }
 
 nav > ul {
@@ -45,7 +41,7 @@ nav > ul {
 }
 
 nav > ul > li {
-  margin: 30px 15px;
+  margin: 30px 20px;
   font-size: 0.8rem;
   font-weight: var(--headingsWeightReg);
 }
@@ -56,8 +52,8 @@ nav > ul > li > a {
 }
 
 .hero {
-  display: flex;
-  flex-direction: column;
+  /* display: flex; */
+  /* flex-direction: column; */
   padding: 70px 30px;
   font-family: var(--bodyFamily);
   align-items: center;
@@ -65,7 +61,6 @@ nav > ul > li > a {
 
 .textbox {
   margin: 30px 0;
-  order: 1;
 }
 
 .textbox > h3 {
@@ -95,6 +90,12 @@ nav > ul > li > a {
   color: #dbd9d9;
 }
 
+.textbox > form > input::after{ 
+  content: "Your validation message";
+  position: absolute;
+  bottom: -8px;
+}
+
 .textbox > form > button {
   display: block;
   width: 100%;
@@ -104,12 +105,12 @@ nav > ul > li > a {
   color: #fff;
   border: 0;
   border-radius: 4px;
+  cursor: pointer;
 }
 
 main {
-  background: var(--lightGrayishBlue);
+  background: #f9f9f9;
   width: 100%;
-  /* margin: 0; */
 }
 
 .desktop-curve {
@@ -117,19 +118,17 @@ main {
 }
 
 .mobile-curve {
-  /* position: relative; */
-  /* margin-top: -50px; */
-  /* top: -20px; */
   width: 100%;
   background-color: #fff;
 }
 
 .md-section {
-  display: flex;
-  flex-direction: column;
+  /* display: flex; */
+  /* flex-direction: column; */
   padding: 0 25px;
   align-items: center;
   font-family: var(--bodyFamily);
+  margin-bottom: 80px;
 }
 
 .textbox2 {
@@ -144,7 +143,7 @@ main {
 }
 
 .textbox2 > p {
-  margin: 25px 0;
+  margin: 15px 0 15px;
   font-size: 14px;
   font-weight: 500;
   text-align: left;
@@ -160,18 +159,33 @@ main {
   /* align-items: center; */
   align-self: center;
   gap: 6px;
-  padding-bottom: 4px;
+  padding-bottom: 2px;
   border-bottom: 1px solid var(--moderateCyan);
   margin: auto;
 }
 
+.textbox > a:hover {
+  color: hsl(170, 93%, 71%);
+}
 
 .testimonial-card {
   width: 90%;
   padding: 20px;
+  margin: 30px auto;
   background: #fff;
   border-radius: 4px;
   order: 2;
+  box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.25);
+}
+
+.testimonial-card > img {
+  height: 15px;
+}
+
+.testimonial-card > p {
+  font-size: 12px;
+  line-height: 18px;
+  max-width: max-content;
 }
 
 .profile {
@@ -187,11 +201,330 @@ main {
 }
 
 .profile > h5 {
-  
-  font-size: 12px;
+  font-size: 11px;
 }
 
 .profile > h5 > span {
   display: block;
-  font-size: 10px;
-} 
+  font-size: 9px;
+  margin-top: 4px;
+}
+
+.earlybird {
+  background-color: var(--desaturatedBlue);
+  padding: 40px 40px 60px;
+  color: #fff;
+  text-align: center;
+  font-family: var(--bodyFamily);
+  font-weight: 400;
+}
+
+.earlybird > h5 {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.earlybird > p {
+  line-height: 25px;
+  margin: 15px 0;
+}
+
+.earlybird > form > input {
+  display: block;
+  width: 80%;
+  height: 35px;
+  margin: 20px auto 0;
+  padding-left: 15px;
+  background: #fff;
+  border-radius: 4px;
+  border: 1px solid rgb(125, 125, 125);
+}
+
+.earlybird > form > input::placeholder {
+  color: #dbd9d9;
+}
+
+.earlybird > form > button {
+  display: block;
+  width: 80%;
+  height: 35px;
+  margin: 8px auto;
+  background: var(--brightBlue);
+  color: #fff;
+  border: 0;
+  border-radius: 4px;
+  font-size: 12px;
+  font-family: var(--headingsFamily);
+  font-weight: 400;
+}
+
+.earlybird > form > button:hover {
+  cursor: pointer;
+  /* background: var(--brightBlue); */
+  background: hsl(224, 92%, 66%);
+}
+
+footer {
+  background-color: var(--veryDarkBlue);
+  color: var(--lightGray);
+  padding: 50px 35px;
+  font-family: var(--bodyFamily);
+  font-weight: 400;
+}
+
+footer > img {
+  fill: #f9f9f9;
+  margin-bottom: 20px;
+}
+
+.foot-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact {
+  margin: 40px 0 20px;
+}
+
+.phone > img,
+.mail > img {
+  height: 100%;
+  margin-right: 20px;
+}
+
+.phone > span,
+.mail > span {
+  font-size: 16px;
+}
+
+.phone,
+.mail {
+  display: flex;
+  justify-items: center;
+  margin: 25px 0;
+}
+
+.foot-menu {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.foot-menu > ul {
+  list-style: none;
+  margin: 20px 0;
+}
+
+.foot-menu > ul > li {
+  margin: 20px 0;
+}
+
+.foot-menu > ul > li > a {
+  text-decoration: none;
+  color: #f9f9f9;
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 25px 0 50px;
+}
+
+.socials > i {
+  padding: 15px;
+  background: #f9f9f9;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+
+/* DESKTOP */
+@media screen and (min-width: 700px) {
+  nav,
+  .md-section {
+    padding: 0 40px;
+  }
+
+  .nav img {
+    margin: 0;
+
+  }
+
+  .hero {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    padding: 70px 40px;
+    font-family: var(--headingsFamily);
+    font-weight: var(--headingsWeightBold);
+  }
+
+  .hero > img {
+    width: 600px;
+  }
+
+  .textbox {
+    max-width: 600px;
+  }
+
+  .textbox > h3,
+  .textbox > p {
+    text-align: left;
+  }
+
+  .textbox > h3 {
+    font-size: 38px;
+  }
+
+  .textbox > p {
+    font-size: 18px;
+    max-width: 550px;
+  }
+
+  .textbox > form {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .textbox > form > input {
+    width: 65%;
+  }
+
+  .textbox > form > button {
+    margin: 0;
+    width: 40%;
+  }
+
+  .md-section {
+    display: grid;
+    align-items: flex-start;
+    grid-template-areas:
+      "a a a a a b b b b b b b"
+      "c c c c c b b b b b b b";
+  }
+
+  .illustrator2 {
+    grid-area: b;
+    width: 500px;
+  }
+
+  .textbox2 {
+    grid-area: a;
+    width: 600px;
+    margin-top: 0;
+  }
+
+  .textbox2 > h3,
+  .textbox2 > p {
+    text-align: left;
+  }
+
+  .textbox2 > h3 {
+    font-size: 34px;
+  }
+
+  .textbox2 > p {
+    width: 500px;
+  }
+
+  .textbox2 > a {
+    margin: 0;
+  }
+
+  .testimonial-card {
+    grid-area: c;
+    width: 300px;
+    margin: 30px 0;
+  }
+
+  .earlybird {
+    display: flex;
+    padding: 50px;
+    font-family: var(--bodyFamily);
+  }
+
+  .earlybird > div {
+    width: 400px;
+    margin-right: auto;
+    text-align: left;
+  }
+
+  .earlybird > div > h5 {
+    font-size: 20px;
+
+  }
+
+  .earlybird > div > p {
+    font-size: 13px;
+    margin: 15px 0;
+    line-height: 18px;
+  }
+
+  .earlybird > form {
+    width: 500px;
+
+  }
+
+  .earlybird > form > input {
+    margin: 0;
+  }
+
+  .earlybird > form > button {
+    width: 30%;
+    margin: 10px 0;
+  }
+
+  footer {
+    padding: 50px;
+  }
+}
+
+.foot-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.contact {
+  width: 25%;
+  margin: 0 0 0 0;
+}
+
+.foot-menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.foot-menu > ul {
+  list-style: none;
+  margin: 20px;
+}
+
+.foot-menu > ul > li {
+  margin: 0 0 20px;
+}
+
+.foot-menu a:hover, .socials i:hover {
+  cursor: pointer;
+  color: hsl(224, 92%, 66%);
+
+}
+
+.socials {
+  width: 25%;
+  margin: 20px 0;
+  /* margin: 45px 0; */
+}
+
+.socials > i {
+  padding: 0;
+  background: #f9f9f9;
+  margin-right: 10px;
+  border-radius: 50%;
+}

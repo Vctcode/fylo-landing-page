@@ -30,10 +30,6 @@
       .attribution a {
         color: hsl(228, 45%, 44%);
       }
-
-      body {
-        background-color: aquamarine;
-      }
     </style>
 
     <link rel="stylesheet" href="style.css" />
@@ -52,7 +48,11 @@
       <div class="hero">
         <img src="./images/illustration-1.svg" alt="" width="300px" />
         <div class="textbox">
-          <h3>All your files in one secure location, accessible anywhere.</h3>
+          <h3>
+            All your files in one secure<span>
+              location, accessible anywhere.</span
+            >
+          </h3>
 
           <p>
             Fylo stores your most important files in one secure location. Access
@@ -119,26 +119,27 @@
             <img src="./images/avatar-testimonial.jpg" alt="" />
 
             <h5>Kyle Burton <span>Founder & CEO, Huddle</span></h5>
-            
           </div>
         </div>
       </div>
 
       <div class="earlybird">
-        <h5>Get early access today</h5>
+        <div>
+          <h5>Get early access today</h5>
 
-        <p>
-          It only takes a minute to sign up and our free starter tier is
-          extremely generous. If you have any questions, our support team would
-          be happy to help you.
-        </p>
+          <p>
+            It only takes a minute to sign up and our free starter tier is
+            extremely generous. If you have any questions, our support team
+            would be happy to help you.
+          </p>
+        </div>
 
         <form action="">
           <input
             type="email"
             name="email"
             id=""
-            placeholder="Enter your mail"
+            placeholder="email@example.com"
           />
 
           <button type="submit">Get Started For Free</button>
@@ -147,9 +148,9 @@
     </main>
 
     <footer>
-      <img id="logo2" src="./images/logo.svg" alt="" style="color: white" />
+      <img id="logo2" src="./images/logo2.svg" alt="" style="color: white" />
 
-      <div>
+      <div class="foot-box" >
         <div class="contact">
           <div class="phone">
             <img src="./images/icon-phone.svg" alt="" />
@@ -171,15 +172,16 @@
           </ul>
 
           <ul>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#">Contact Us</a></li>
             <li><a href="#">Terms</a></li>
             <li><a href="#">Privacy</a></li>
           </ul>
         </div>
 
         <div class="socials">
-          <i></i>
-          <i></i>
+          <i class="fa fa-twitter"></i>
+          <i></i><i class="fa fa-facebook" aria-hidden="true"></i>
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
           <i></i>
         </div>
       </div>
